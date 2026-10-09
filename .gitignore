@@ -1,0 +1,12 @@
+.build/
+__pycache__/
+*.pyc
+.DS_Store
+test-results/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+dist/

@@ -1,0 +1,340 @@
+{
+ "checks": [
+  {
+   "name": "probe 1 of 14 (a cue): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "cue",
+    "text": {
+     "$ref": "embeddings.json#/probes/0/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/0/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 2 of 14 (a cue): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "cue",
+    "text": {
+     "$ref": "embeddings.json#/probes/1/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/1/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 3 of 14 (a cue): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "cue",
+    "text": {
+     "$ref": "embeddings.json#/probes/2/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/2/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 4 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/3/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/3/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 5 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/4/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/4/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 6 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/5/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/5/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 7 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/6/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/6/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 8 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/7/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/7/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 9 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/8/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/8/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 10 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/9/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/9/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 11 of 14 (a memory): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "memory",
+    "text": {
+     "$ref": "embeddings.json#/probes/10/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/10/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 12 of 14 (a cue): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "cue",
+    "text": {
+     "$ref": "embeddings.json#/probes/11/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/11/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 13 of 14 (a cue): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "cue",
+    "text": {
+     "$ref": "embeddings.json#/probes/12/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/12/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  },
+  {
+   "name": "probe 14 of 14 (a cue): its vector agrees with the publisher's",
+   "sets": [
+    "*"
+   ],
+   "lane": "embeddings",
+   "input": {
+    "kind": "cue",
+    "text": {
+     "$ref": "embeddings.json#/probes/13/text"
+    }
+   },
+   "expect": {
+    "vector_cosine_at_least": {
+     "reference": {
+      "$ref": "embeddings.json#/probes/13/vector"
+     },
+     "min": {
+      "$ref": "embeddings.json#/probe_bound"
+     }
+    }
+   },
+   "within_ms": 5000
+  }
+ ]
+}

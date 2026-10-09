@@ -1,0 +1,141 @@
+{
+  "id": "id.aiii.meaning",
+  "version": "0.0.1-beta.5",
+  "plugin_family": "provider_bridge",
+  "aiios_min_version": "0.1.15",
+  "publisher": "AIII",
+  "title": "AII Meaning",
+  "description": "Recall by meaning, computed on this machine. Turns a memory or a cue into a vector with a multilingual embedding model, so that the identity's recall finds what is near in sense as well as what shares words. Only AII OS asks it: it has no network, no tools, no settings and no storage, and keeps nothing it is handed. One signed package for macOS Apple Silicon, Linux x86-64, Linux arm64 and Windows x86-64; AII OS downloads the model and its tokenizer (328 MB) and the runtime for its own platform and verifies each. It computes on the processor, on at most four threads, and lets the model go from memory a minute after the last recall. A memory is read to its first 2,048 tokens: the whole of an 8,000-character entry in English, German or Spanish, and about the first 3,900 characters of Korean, 3,450 of Japanese and 2,900 of Chinese; what lies after that in a long entry is not read. Third-party model and runtime components retain their own licenses.",
+  "license": "Apache-2.0",
+  "interface": {
+    "id": "aii.embeddings",
+    "version": 1
+  },
+  "capability_envelope": [],
+  "variants": [
+    {
+      "variant_id": "linux-x86_64-cpu",
+      "platform": "linux",
+      "arch": "x86_64",
+      "topology": "full_identity_host",
+      "execution_runtime": "native_t3_component",
+      "admission_profile": "platform_reserved",
+      "variant_capabilities": [],
+      "accelerator": {
+        "os": "linux",
+        "arch": "x86_64",
+        "backend": "cpu",
+        "runtime_libraries": [
+          "onnxruntime-1.24.2"
+        ],
+        "precision": "int8",
+        "models": [
+          "snowflake-arctic-embed-m-v2.0-q8.onnx",
+          "snowflake-arctic-embed-m-v2.0-tokenizer.json"
+        ],
+        "memory_bytes": 1200000000,
+        "device_memory_bytes": 0,
+        "session_limit": 1,
+        "fallback": "none"
+      },
+      "artifact": "dist/aii-meaning-t3-linux-x86_64"
+    },
+    {
+      "variant_id": "linux-arm64-cpu",
+      "platform": "linux",
+      "arch": "arm64",
+      "topology": "full_identity_host",
+      "execution_runtime": "native_t3_component",
+      "admission_profile": "platform_reserved",
+      "variant_capabilities": [],
+      "accelerator": {
+        "os": "linux",
+        "arch": "arm64",
+        "backend": "cpu",
+        "runtime_libraries": [
+          "onnxruntime-1.24.2"
+        ],
+        "precision": "int8",
+        "models": [
+          "snowflake-arctic-embed-m-v2.0-q8.onnx",
+          "snowflake-arctic-embed-m-v2.0-tokenizer.json"
+        ],
+        "memory_bytes": 1200000000,
+        "device_memory_bytes": 0,
+        "session_limit": 1,
+        "fallback": "none"
+      },
+      "artifact": "dist/aii-meaning-t3-linux-arm64"
+    },
+    {
+      "variant_id": "macos-arm64-cpu",
+      "platform": "macos",
+      "arch": "arm64",
+      "topology": "full_identity_host",
+      "execution_runtime": "native_t3_component",
+      "admission_profile": "platform_reserved",
+      "variant_capabilities": [],
+      "accelerator": {
+        "os": "macos",
+        "arch": "arm64",
+        "backend": "cpu",
+        "runtime_libraries": [
+          "onnxruntime-1.24.2"
+        ],
+        "precision": "int8",
+        "models": [
+          "snowflake-arctic-embed-m-v2.0-q8.onnx",
+          "snowflake-arctic-embed-m-v2.0-tokenizer.json"
+        ],
+        "memory_bytes": 1600000000,
+        "device_memory_bytes": 0,
+        "session_limit": 1,
+        "fallback": "none"
+      },
+      "artifact": "dist/aii-meaning-t3-macos-arm64"
+    },
+    {
+      "variant_id": "windows-x86_64-cpu",
+      "platform": "windows",
+      "arch": "x86_64",
+      "topology": "full_identity_host",
+      "execution_runtime": "native_t3_component",
+      "admission_profile": "platform_reserved",
+      "variant_capabilities": [],
+      "accelerator": {
+        "os": "windows",
+        "arch": "x86_64",
+        "backend": "cpu",
+        "runtime_libraries": [
+          "onnxruntime-1.24.2"
+        ],
+        "precision": "int8",
+        "models": [
+          "snowflake-arctic-embed-m-v2.0-q8.onnx",
+          "snowflake-arctic-embed-m-v2.0-tokenizer.json"
+        ],
+        "memory_bytes": 1300000000,
+        "device_memory_bytes": 0,
+        "session_limit": 1,
+        "fallback": "none"
+      },
+      "artifact": "dist/aii-meaning-t3-windows-x86_64.exe"
+    }
+  ],
+  "models": [
+    {
+      "name": "snowflake-arctic-embed-m-v2.0-q8.onnx",
+      "url": "https://huggingface.co/Snowflake/snowflake-arctic-embed-m-v2.0/resolve/95c2741480856aa9666782eb4afe11959938017f/onnx/model_int8.onnx",
+      "sha256": "03d923bb1850ebdccb068e2f3abd8aa43fe81c50d07d037ef103fe3d0fb78e3b",
+      "size": 310916060
+    },
+    {
+      "name": "snowflake-arctic-embed-m-v2.0-tokenizer.json",
+      "url": "https://huggingface.co/Snowflake/snowflake-arctic-embed-m-v2.0/resolve/95c2741480856aa9666782eb4afe11959938017f/tokenizer.json",
+      "sha256": "f1cc44ad7faaeec47241864835473fd5403f2da94673f3f764a77ebcb0a803ec",
+      "size": 17083009
+    }
+  ],
+  "embeddings_file": "embeddings.json",
+  "validation_file": "validation.json"
+}

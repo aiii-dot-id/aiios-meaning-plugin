@@ -1,0 +1,29 @@
+# github.com/aiii-dot-id/aii-plugin-sdk v0.1.16-sdk.1
+## explicit; go 1.25
+github.com/aiii-dot-id/aii-plugin-sdk/internal/fileperm
+github.com/aiii-dot-id/aii-plugin-sdk/pkg/aiiosdk
+github.com/aiii-dot-id/aii-plugin-sdk/pkg/aiiospkg
+# github.com/cloudflare/circl v1.6.3
+## explicit; go 1.22.0
+github.com/cloudflare/circl/internal/conv
+github.com/cloudflare/circl/internal/sha3
+github.com/cloudflare/circl/sign
+github.com/cloudflare/circl/sign/internal/dilithium
+github.com/cloudflare/circl/sign/internal/dilithium/params
+github.com/cloudflare/circl/sign/mldsa/mldsa87
+github.com/cloudflare/circl/sign/mldsa/mldsa87/internal
+github.com/cloudflare/circl/sign/slhdsa
+github.com/cloudflare/circl/simd/keccakf1600
+github.com/cloudflare/circl/xof
+github.com/cloudflare/circl/xof/k12
+# golang.org/x/crypto v0.30.0
+## explicit; go 1.20
+golang.org/x/crypto/blake2b
+golang.org/x/crypto/blake2s
+golang.org/x/crypto/cryptobyte
+golang.org/x/crypto/cryptobyte/asn1
+golang.org/x/crypto/sha3
+# golang.org/x/sys v0.28.0
+## explicit; go 1.18
+golang.org/x/sys/cpu
+golang.org/x/sys/windows

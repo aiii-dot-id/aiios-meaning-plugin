@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/aiii-dot-id/aii-plugin-sdk",
+  "module": "github.com/aiii-dot-id/aii-plugin-sdk",
+  "version": "v0.1.16-sdk.1",
+  "revision": "32ccba4f2a06282f60649d2422d615e0e1113b81",
+  "vendored": "plugin/native/vendor"
+}
