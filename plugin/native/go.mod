@@ -3,7 +3,7 @@ module github.com/aiii-dot-id/aiios-meaning-plugin/plugin/native
 go 1.27.0
 
 require (
-	github.com/aiii-dot-id/aii-plugin-sdk v0.1.16-sdk.1
+	github.com/aiii-dot-id/aii-plugin-sdk v0.1.16
 	golang.org/x/sys v0.28.0
 )
 

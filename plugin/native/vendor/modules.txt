@@ -1,4 +1,4 @@
-# github.com/aiii-dot-id/aii-plugin-sdk v0.1.16-sdk.1
+# github.com/aiii-dot-id/aii-plugin-sdk v0.1.16
 ## explicit; go 1.25
 github.com/aiii-dot-id/aii-plugin-sdk/internal/fileperm
 github.com/aiii-dot-id/aii-plugin-sdk/pkg/aiiosdk

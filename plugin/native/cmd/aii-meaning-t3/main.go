@@ -4,10 +4,13 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"math"
 	"os"
 	"path/filepath"
 	"runtime"
 	"runtime/debug"
+	"strconv"
+	"strings"
 	"time"
 
 	"github.com/aiii-dot-id/aii-plugin-sdk/pkg/aiiosdk"
@@ -21,6 +24,9 @@ const (
 
 	runtimeEnv = "AII_RUNTIME_ROOT"
 	modelsEnv  = "AII_MODELS_DIR"
+
+	threadsEnv = "AII_THREADS"
+	keepEnv    = "AII_KEEP_LOADED_SECONDS"
 
 	workerName    = "meaning-worker"
 	modelName     = "snowflake-arctic-embed-m-v2.0-q8.onnx"
@@ -117,7 +123,20 @@ func config() (engine.Config, error) {
 		Tokenizer: filepath.Join(models, tokenizerName),
 		Worker:    filepath.Join(root, worker),
 		Model:     filepath.Join(models, modelName),
-		Threads:   min(maxThreads, runtime.NumCPU()),
-		Quiet:     quiet,
+		Threads:   min(operator(threadsEnv, maxThreads, 1, math.MaxInt32), maxThreads, runtime.NumCPU()),
+		Quiet:     time.Duration(operator(keepEnv, int(quiet/time.Second), 0, 86400)) * time.Second,
 	}, nil
+}
+
+func operator(env string, def, lo, hi int) int {
+	s, set := os.LookupEnv(env)
+	if !set {
+		return def
+	}
+	n, err := strconv.Atoi(strings.TrimSpace(s))
+	if err != nil || n < lo || n > hi {
+		fmt.Fprintf(os.Stderr, "aii-meaning-t3: %s=%q is not a whole number from %d to %d; the default %d holds\n", env, s, lo, hi, def)
+		return def
+	}
+	return n
 }
